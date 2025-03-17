@@ -279,7 +279,7 @@ h2 {
 }
 
 #about_image {
-    width: 50%;
+    width: 70%;
     height: 100%;
 
 }
@@ -412,4 +412,52 @@ footer {
     .about-content img {
         width: 100%;
     }
+}
+
+
+/* Modal Customizations */
+.modal-content {
+    background-color: #fff; /* White */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #d2b48c; /* Light brown */
+    color: #fff;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.btn-close {
+    filter: invert(1); /* White close button */
+}
+
+.modal-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.modal-body p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #4a3c31; /* Dark brown */
+}
+
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background-color: #d2b48c; /* Light brown */
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #b89b72; /* Darker brown */
 }

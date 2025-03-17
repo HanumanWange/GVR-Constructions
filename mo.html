@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Modal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS to ensure modal is centered and appears properly */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+        
+        .modal-backdrop {
+            opacity: 0.7 !important; /* Adjust backdrop opacity if needed */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Video Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- YouTube iframe -->
+                <iframe 
+                    width="100%" 
+                    height="400" 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    frameborder="0" 
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Initialize modal on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        var videoModal = new bootstrap.Modal(document.getElementById('videoModal'), {
+            show: true // Auto-show the modal
+        });
+        
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.modal')) {
+                videoModal.hide();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
