@@ -6,6 +6,9 @@
     scroll-behavior: smooth;
 }
 
+
+
+
 body {
     background: #fff; /* White */
     color: #4a3c31; /* Dark brown */
@@ -60,7 +63,7 @@ nav {
 .logo_img {
 
     width: 30%;
-    height: 15%;
+    height: 10%;
     
 }
 
@@ -468,3 +471,81 @@ footer {
 .btn-secondary:hover {
     background-color: #b89b72; /* Darker brown */
 }
+
+/* animation */
+
+/* Self-contained logo container */
+.gvr-animated-container {
+    display: inline-block;
+    padding: 10px;
+    background: #555454; /* Container background */
+    border-radius: 4px;
+    margin: 0.5px;
+}
+
+/* Specific animated text class */
+.gvr-animated-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: block;
+    position: relative;
+    background-image: linear-gradient(
+        90deg,
+        #8b8686 0%,
+        #e2e0dd 20%,
+        #f5f5bf 40%,
+        #626662 60%,
+        #00ffff 70%,
+        #b8b8b9 80%,
+        #b3b3b3 90%,
+        #c9c3c6 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gvr-rainbow 3s linear infinite;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Scoped animation */
+@keyframes gvr-rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Isolated underline effect */
+.gvr-animated-logo::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+    #8b8686 0%,
+    #e2e0dd 20%,
+    #f5f5bf 40%,
+    #626662 60%,
+    #00ffff 70%,
+    #b8b8b9 80%,
+    #b3b3b3 90%,
+    #c9c3c6 100%
+        );
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    animation: gvr-underline 2s linear infinite;
+}
+
+@keyframes gvr-underline {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+#logo_size{
+    height: 5%;
+    width: 7%;
+}
+
+
+
