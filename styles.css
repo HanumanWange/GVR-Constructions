@@ -547,5 +547,69 @@ footer {
     width: 7%;
 }
 
+.gvr-animated-container {
+    display: inline-block;
+    padding: 20px;
+    background: #1a1a1a; /* Container background */
+    border-radius: 8px;
+    margin: 20px;
+}
 
+/* Specific animated text class */
+.gvr-animated-logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: block;
+    position: relative;
+    background-image: linear-gradient(
+        90deg,
+        #f7f7f7 0%,
+        #7e7265 20%,
+        #e0e0d4 40%,
+        #e9eee9 60%,
+        #e3e9e9 70%,
+        #666688 80%,
+        #d1c1e0 90%,
+        #494045 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gvr-rainbow 3s linear infinite;
+    text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Scoped animation */
+@keyframes gvr-rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Isolated underline effect */
+.gvr-animated-logo::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        #ffffff, 
+        #d1cecb, 
+        #1a1a13, 
+        #b7c5b7, 
+        #263131, 
+        #dedeeb, 
+        #b3acbb,
+        #928e90);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    animation: gvr-underline 2s linear infinite;
+}
+
+@keyframes gvr-underline {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
 
