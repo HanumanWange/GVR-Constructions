@@ -57,6 +57,13 @@ nav {
     color: #fff;
 }
 
+.logo_img {
+
+    width: 30%;
+    height: 15%;
+    
+}
+
 nav ul {
     list-style: none;
     display: flex;
