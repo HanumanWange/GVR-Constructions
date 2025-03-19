@@ -494,10 +494,10 @@ footer {
     position: relative;
     background-image: linear-gradient(
         90deg,
-        #8b8686 0%,
-        #e2e0dd 20%,
-        #f5f5bf 40%,
-        #626662 60%,
+        #ca9797 0%,
+        #f1bf73 20%,
+        #ebeb58 40%,
+        #72d672 60%,
         #00ffff 70%,
         #b8b8b9 80%,
         #b3b3b3 90%,
@@ -525,12 +525,12 @@ footer {
     background: linear-gradient(90deg, 
     #8b8686 0%,
     #e2e0dd 20%,
-    #f5f5bf 40%,
+    #eeee0a 40%,
     #626662 60%,
     #00ffff 70%,
     #b8b8b9 80%,
-    #b3b3b3 90%,
-    #c9c3c6 100%
+    #e7a3a3 90%,
+    #ffa9d4 100%
         );
     position: absolute;
     bottom: -5px;
