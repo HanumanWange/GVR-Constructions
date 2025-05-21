@@ -12,7 +12,34 @@
 body {
     background: #fff; /* White */
     color: #4a3c31; /* Dark brown */
+    
 }
+
+/* Desktop default */ /* Default font size for larger screens */
+body {
+  font-size: 16px;
+}
+
+/* Mobile devices */ /* Font size for smaller screens */
+/* Adjust font size for mobile devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
 
 
 
@@ -274,6 +301,66 @@ h2 {
 
 .plan-card h3 {
     color: #d2b48c;
+}
+
+/* Career Cards Section */
+.career-list {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.career-list h2 {
+  text-align: center;
+  color: #4a3c31;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.job-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.job-card {
+  background-color: #ffffff;
+  border: 1px solid #e0cdb2;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #4a3c31;
+}
+
+.job-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.job-card a {
+  display: inline-block;
+  color: #a0522d;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+  transition: color 0.3s ease;
+}
+
+.job-card a:hover {
+  color: #7b3f1d;
 }
 
 /* About Us Section */
