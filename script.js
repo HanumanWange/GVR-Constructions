@@ -80,3 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
     // welcomeModal.show();
 });
+
+// Function to fetch projects from MongoDB
+async function fetchProjects() {
+    try {
+        const response = await fetch('http://localhost:3000/api/projects');
+        const projects = await response.json();
+        
+        // Update the projects grid with data from MongoDB
+        const projectsGrid = document.querySelector('.projects-grid');
+        projectsGrid.innerHTML = projects.map(project => `
+            <div class="project-card">
+                <img src="${project.imageUrl}" alt="${project.title}">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <p>Location: ${project.location}</p>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error fetching projects:', error);
+    }
+}
+
+// Call fetchProjects when the page loads
+document.addEventListener('DOMContentLoaded', fetchProjects);
